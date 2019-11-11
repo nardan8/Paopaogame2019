@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".GameFieldActivity"
+        android:padding="10dp"
+        android:orientation="vertical"
+        android:id="@+id/baseElem"
+        android:background="@drawable/bcg_gf">
+
+    <LinearLayout android:layout_width="match_parent"
+                  android:orientation="horizontal"
+                  android:layout_height="40dp"
+                  android:layout_gravity="center" android:gravity="center"
+                  android:paddingBottom="5dp" android:paddingTop="5dp" android:paddingStart="10dp"
+                  android:paddingEnd="10dp">
+
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="match_parent"
+                  android:textStyle="bold"
+                  android:textColor="@color/colorAccent"
+                  android:textScaleX="1.2"
+                  android:textAlignment="center" android:id="@+id/tvScore" android:layout_marginEnd="10dp"
+                  android:gravity="center" android:text="@string/score_value"/>
+
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="match_parent"
+                  android:textStyle="bold"
+                  android:textColor="@color/colorPrimary"
+                  android:textScaleX="1.2"
+                  android:textAlignment="center" android:id="@+id/tvLevel" android:layout_marginEnd="5dp"
+                  android:text="@string/win_dlg_level" android:textAllCaps="true" android:gravity="center"/>
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="match_parent"
+                  android:textStyle="bold"
+                  android:textColor="@color/colorPrimary"
+                  android:textScaleX="1.2"
+                  android:textAlignment="center" android:id="@+id/tvLevel2" android:layout_marginEnd="10dp"
+                  android:text="@string/win_dlg_level_value" android:textAllCaps="true" android:gravity="center"/>
+        <ImageView android:layout_width="14dp"
+                   android:layout_height="match_parent"
+                   android:contentDescription="@string/search_descr" android:src="@drawable/search"
+                   android:id="@+id/ivSearch" android:textAlignment="center"
+                   android:layout_marginEnd="5dp"/>
+
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="match_parent"
+                  android:textStyle="bold"
+                  android:textColor="@color/colorPrimary"
+                  android:textScaleX="1.2"
+                  android:textAlignment="center" android:id="@+id/tvSearch" android:layout_marginEnd="10dp"
+                  android:layout_gravity="center" android:gravity="center"/>
+
+        <ImageView android:layout_width="14dp"
+                   android:layout_height="match_parent"
+                   android:contentDescription="@string/shuffle_descr" android:src="@drawable/shuffle"
+                   android:id="@+id/ivShuffle" android:layout_marginEnd="5dp"/>
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="match_parent"
+                  android:textStyle="bold"
+                  android:textColor="@color/colorPrimary"
+                  android:textScaleX="1.2"
+                  android:textAlignment="center" android:id="@+id/tvShuffle" android:layout_marginEnd="10dp"
+                  android:layout_gravity="center" android:gravity="center"/>
+
+        <ProgressBar
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:background="@drawable/progress_bar"
+                android:layout_width="wrap_content" android:progress="420"
+                android:textAlignment="center"
+                android:layout_gravity="center"
+                android:max="420"
+                android:progressDrawable="@drawable/progress_bar"
+                android:id="@+id/progBar" android:layout_marginEnd="10dp"
+                android:keepScreenOn="false" android:layout_weight="0.3" android:layout_height="13dp"/>
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="25dp" app:srcCompat="@drawable/melody_on_off"
+                android:id="@+id/ivMelodyOnOff"
+                android:background="@drawable/oval_shape_green" android:layout_marginEnd="10dp"
+                android:contentDescription="@string/melody_on_off" android:adjustViewBounds="true"
+                android:padding="5dp"/>
+        <ImageView
+                android:src="@drawable/pause"
+                android:contentDescription="@string/pause_game"
+                android:id="@+id/btnPauseGame"
+                android:background="@drawable/oval_shape_green" android:padding="5dp"
+                android:layout_width="wrap_content" android:adjustViewBounds="true" android:clickable="true"
+                android:layout_height="25dp"/>
+
+
+    </LinearLayout>
+    <androidx.gridlayout.widget.GridLayout
+            android:layout_height="match_parent"
+            app:columnCount="16"
+            android:layout_width="match_parent"
+            app:rowCount="9"
+            android:layout_gravity="center"
+            android:background="@android:color/transparent"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:animateLayoutChanges="false"
+            android:id="@+id/cardsGL">
+    </androidx.gridlayout.widget.GridLayout>
+</LinearLayout>

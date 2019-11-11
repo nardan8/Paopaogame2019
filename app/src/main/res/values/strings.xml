@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Paopao Experiment</string>
+    <string name="video_ad">Press Watch Video to receive some extra time</string>
+    <string name="new_game">New Game</string>
+    <string name="continue_game">Continue</string>
+    <string name="pause_game">Pause</string>
+    <string name="exit_game">Exit</string>
+    <string name="easy_game">Easy</string>
+    <string name="hard_game">Hard</string>
+    <string name="watch_video">Watch Video</string>
+    <string name="win_dlg_title">"Congratulations!!! Level Complete. "</string>
+    <string name="win_dlg_score">Score</string>
+    <string name="score_value" translatable="false">000000</string>
+    <string name="win_dlg_level">Level</string>
+    <string name="win_dlg_level_value" translatable="false">1</string>
+    <string name="win_dlg_close">Close</string>
+    <string name="melody_on_off">Turn on or off game melody</string>
+    <string name="search_descr">search icon</string>
+    <string name="shuffle_descr">shuffle icon</string>
+    <string name="game_complete_title">Congratulations!!! You passed all levels!!!</string>
+    <string name="ok">OK</string>
+    <string name="time_over">Time is over</string>
+</resources>
