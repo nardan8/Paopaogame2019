@@ -7,8 +7,7 @@
     <string name="exit_game">Exit</string>
     <string name="easy_game">Easy</string>
     <string name="hard_game">Hard</string>
-    <string name="watch_video">Watch Video</string>
-    <string name="win_dlg_title">"Congratulations!!! Level Complete. "</string>
+    <string name="">Level passed!</string>
     <string name="win_dlg_score">Score</string>
     <string name="score_value" translatable="false">000000</string>
     <string name="win_dlg_level">Level</string>
@@ -20,4 +19,5 @@
     <string name="game_complete_title">Congratulations!!! You passed all levels!!!</string>
     <string name="ok">OK</string>
     <string name="time_over">Time is over</string>
+    <string name="win_dlg_header">Level passed</string>
 </resources>

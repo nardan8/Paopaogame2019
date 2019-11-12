@@ -1,33 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               xmlns:app="http://schemas.android.com/apk/res-auto"
-              xmlns:tools="http://schemas.android.com/tools" android:layout_width="wrap_content"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="wrap_content"
               android:layout_height="wrap_content"
               android:orientation="vertical"
               android:gravity="center"
               android:layout_gravity="center"
               android:background="@drawable/dialog_style"
-              app:layout_gravity="center" android:padding="30dp"
+              app:layout_gravity="center"
+              android:padding="23dp"
 >
 
-    <TextView android:layout_width="wrap_content"
+    <TextView android:layout_width="match_parent"
               android:layout_height="wrap_content"
               android:text="@string/time_over"
               android:textAlignment="center"
               android:fontFamily="serif"
               android:textStyle="bold"
               android:textColor="@color/browser_actions_text_color"
-              android:textSize="14sp"
+              android:textSize="13sp"
               android:textScaleX="1.1"
-              android:layout_marginBottom="30dp" android:textAllCaps="true"/>
+              android:layout_marginBottom="15dp" android:textAllCaps="true" android:layout_marginTop="5dp"/>
 
     <Button
             android:text="@string/new_game"
-            android:layout_width="200dp"
+            android:layout_width="150dp"
             android:layout_height="40dp"
             android:id="@+id/btnNewGame1"
             android:textColor="@color/colorPrimaryDark"
             android:background="@drawable/button_bcg" android:textStyle="bold"
-            android:textSize="14sp" android:textScaleX="1.1"/>
+            android:textSize="13sp" android:textScaleX="1.1" android:layout_margin="5dp"/>
 
 </LinearLayout>
