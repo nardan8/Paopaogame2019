@@ -97,16 +97,11 @@ class Game {
 
                 var isResult: Boolean
 
-                Log.i("mycheck", "Ok we are in Z!!!")
-                Log.i("mycheck", "prevBtnIndex: $prevBtnIndex, nextBtnIndex: $nextBtnIndex")
-
                 // check horizontal z
                 isResult = checker.horizontalZ(prevBtnIndex, nextBtnIndex, cardIdImgId)
-                Log.i("mycheck", "horizontal Z, isresult = $isResult")
 
                 // if isResult equal to false then check vertical check
                 if (!isResult) isResult = checker.verticalZ(prevBtnIndex, nextBtnIndex, cardIdImgId)
-                Log.i("mycheck", "vertical Z, isresult = $isResult")
 
                 // If isResult equal to false then Check Are there all spaces empty from Top_Btn row to Bottom_Btn
                 if (!isResult && checker.isColEmptyFromFirstBtnRowToSecondBtnRow(prevBtnIndex, nextBtnIndex, cardIdImgId)) {
@@ -121,7 +116,6 @@ class Game {
                         isResult = checker.piFromDownToUp(nextBtnIndex + prevBtnIndex % 16 - nextBtnIndex % 16, nextBtnIndex, cardIdImgId)
                     }
                 }
-                Log.i("mycheck", "isColEmptyFromFirstBtnRowToSecondBtnRow, isresult = $isResult")
 
                 // If isResult false then Check is Column Empty from Top Btn Row To Bottom Button Row
                 if (!isResult && checker.isColEmptyFromSecondBtnRowToFirstRow(prevBtnIndex,
@@ -138,7 +132,6 @@ class Game {
                         isResult = checker.piFromUpToDown(prevBtnIndex, prevBtnIndex - prevBtnIndex % 16 + nextBtnIndex % 16, cardIdImgId)
                     }
                 }
-                Log.i("mycheck", "isColEmptyFromSecondBtnRowToFirstRow, isresult = $isResult")
 
                 // If isResult false then Check is Row empty from Bottom Btn Col to Top Btn Col
                 if (!isResult && checker.isRowEmptyFromFirstBtnColToSecondBtnCol(prevBtnIndex,
@@ -153,7 +146,6 @@ class Game {
                         isResult = checker.piFromRightToLeft(prevBtnIndex - prevBtnIndex % 16 + nextBtnIndex % 16, nextBtnIndex, cardIdImgId)
                     }
                 }
-                Log.i("mycheck", "isRowEmptyFromFirstBtnColToSecondBtnCol, isresult = $isResult")
 
                 // If isResult false, then Check is Row empty from Top Btn Col to Bottom Btn Col
                 if (!isResult && checker.isRowEmptyFromSecondBtnColToFirstBtnCol(prevBtnIndex, nextBtnIndex, cardIdImgId)) {
@@ -166,7 +158,6 @@ class Game {
                         isResult = checker.piFromLeftToRight(prevBtnIndex, nextBtnIndex - nextBtnIndex % 16 + prevBtnIndex % 16, cardIdImgId)
                     }
                 }
-                Log.i("mycheck", "isRowEmptyFromSecondBtnColToFirstBtnCol, isresult = $isResult")
 
                 return isResult
             }
@@ -176,18 +167,12 @@ class Game {
 
                 var isResult: Boolean
 
-                Log.i("mycheck", "Ok we are in S-manner!!!")
-                Log.i("mycheck", "prevBtnIndex: $prevBtnIndex, nextBtnIndex: $nextBtnIndex")
-
                 isResult = checker.horizontalS(prevBtnIndex, nextBtnIndex, cardIdImgId)
-                Log.i("mycheck", "horizontal S, isresult = $isResult")
 
                 if (!isResult) isResult = checker.verticalS(prevBtnIndex, nextBtnIndex, cardIdImgId)
-                Log.i("mycheck", "vertical S, isresult = $isResult")
 
                 if (!isResult && checker.isColEmptyFromFirstBtnRowToSecondBtnRow(prevBtnIndex, nextBtnIndex, cardIdImgId)) {
 
-                    Log.i("mycheck", "isColEmptyFromFBRtoSecBtnRow = ${checker.isColEmptyFromFirstBtnRowToSecondBtnRow(prevBtnIndex, nextBtnIndex, cardIdImgId)}")
                     // if Smaller_Btn on the First Row
                     if (nextBtnIndex < 16)isResult = true
 
@@ -203,8 +188,6 @@ class Game {
                     // if Bottom btn on the any row other than Last Row
                     else isResult = checker.piFromUpToDown(prevBtnIndex - prevBtnIndex % 16 + nextBtnIndex % 16, prevBtnIndex, cardIdImgId)
                 }
-
-                Log.i("mycheck", "Checker result: ${checker.isRowEmptyFromSecondBtnColToFirstBtnCol(prevBtnIndex, nextBtnIndex, cardIdImgId)}")
 
                 if (!isResult && checker.isRowEmptyFromFirstBtnColToSecondBtnCol(prevBtnIndex, nextBtnIndex, cardIdImgId)) {
 
@@ -250,13 +233,10 @@ class Game {
 
                 if (cardIdImgId[keys[i]] == cardIdImgId[keys[j]]){
 
-                    Log.i("isTherePair", "Before calling checkIdentity")
                     if (checkIdentity(keys[i], keys[j])){
 
                         possibleNextFirstBtnIndex = keys[i]
                         possibleNextSecondBtnIndex = keys[j]
-
-                        Log.i("isTherePair", "possibleFirstBtn: $possibleNextFirstBtnIndex, possibleSecondBtn: $possibleNextSecondBtnIndex")
 
                         return true
                     }

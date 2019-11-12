@@ -22,8 +22,6 @@ class MainActivity : AppCompatActivity() {
             WindowManager.LayoutParams.FLAG_FULLSCREEN)
         setContentView(R.layout.activity_main)
 
-        Log.i("gamegame", "MainActivity. In OnCreate()")
-
         msIntent = Intent(applicationContext, MyMusicService::class.java)
 
     }
@@ -38,7 +36,6 @@ class MainActivity : AppCompatActivity() {
     // override onStop method
     override fun onStop() {
 
-        Log.i("gamegame", "MainActivity. In OnStop()")
         btnNewGame.setOnClickListener(null)
         btnContinue.setOnClickListener(null)
         btnExit.setOnClickListener(null)
@@ -52,8 +49,6 @@ class MainActivity : AppCompatActivity() {
 
         // startService if isSoundOn equal to true
         if (isSoundOn) startService(msIntent)
-
-        Log.i("gamegame", "Main Activity. In OnResume()")
 
         val sharedPref = getSharedPreferences("savedGameIndicators", Context.MODE_PRIVATE)
 
@@ -129,8 +124,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onPause() {
-
-        Log.i("gamegame", "MainActivity. In OnPause()")
 
         stopService(msIntent)
         super.onPause()

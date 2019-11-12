@@ -170,22 +170,17 @@ class Checker {
 
         for (i in secondIndex + 16..(firstIndex - 16 - firstIndex % 16 + secondIndex % 16) step 16){
 
-//            Log.i("Z", "(i, value, range): ${i}, ${mapBtnIdWithImgIndexes[i]}, (${secondIndex + 16}, ${firstIndex - 16 - firstIndex % 16 + secondIndex % 16})")
             if (mapBtnIdWithImgIndexes[i] != 0) return false
 
             var verEmptySpaces = 0
 
             for (j in (firstIndex - 16) downTo (i - i % 16 + firstIndex % 16) step 16){
 
-//                Log.i("Z", "(j, value, range): ${j}, ${mapBtnIdWithImgIndexes[j]}, (${firstIndex - 16}, ${i - i % 16 + firstIndex % 16})")
                 if (mapBtnIdWithImgIndexes[j] != 0) break
 
                 verEmptySpaces += 16
-//                Log.i("Z", "verEmptySpaces: ${verEmptySpaces}")
             }
 
-//            Log.i("Z", "verEmptySpaces outside for loop: ${verEmptySpaces}")
-//            Log.i("Z", "verEmptySpaces == firstIndex - firstIndex % 16 + secondIndex % 16 - i: ${verEmptySpaces} == ${firstIndex - firstIndex % 16 + secondIndex % 16 - i}")
             if (verEmptySpaces == firstIndex - firstIndex % 16 + secondIndex % 16 - i){
 
                 if (firstIndex % 16 - secondIndex % 16 == 1) return true
@@ -194,15 +189,11 @@ class Checker {
 
                 for (h in (i + 1)..(i - secondIndex % 16 + firstIndex % 16 - 1)) {
 
-//                    Log.i("Z", "(h, value, range): ${h}, ${mapBtnIdWithImgIndexes[h]}, (${i + 1}, ${i - secondIndex % 16 + firstIndex % 16 - 1})")
                     if (mapBtnIdWithImgIndexes[h] != 0) break
 
                     ++horizontalEmptySpaces
-//                    Log.i("Z", "horizontalEmptySpaces: ${horizontalEmptySpaces}")
                 }
 
-//                Log.i("Z", "horizontalEmptySpaces outside for loop: ${horizontalEmptySpaces}")
-//                Log.i("Z", "horizontalEmptySpaces == firstIndex % 16 - secondIndex % 16: ${horizontalEmptySpaces} == ${firstIndex % 16 - secondIndex % 16}")
                 if (horizontalEmptySpaces == firstIndex % 16 - secondIndex % 16) {
                     return true
                 }

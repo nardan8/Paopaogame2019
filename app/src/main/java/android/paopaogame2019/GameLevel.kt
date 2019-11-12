@@ -17,8 +17,6 @@ class GameLevel {
         // swap operation
         if (lessIndex > greaterIndex) lessIndex = greaterIndex.also { greaterIndex = lessIndex }
 
-        Log.i("hmIndex", "less: $lessIndex, greater: $greaterIndex")
-
         if (lessIndex > 15) {
 
             for (i in (lessIndex - 16) downTo (lessIndex % 16) step 16) {
@@ -54,8 +52,6 @@ class GameLevel {
 
         // swap operation
         if (lessIndex > greaterIndex) lessIndex = greaterIndex.also { greaterIndex = lessIndex }
-
-        Log.i("hmIndex", "less: $lessIndex, greater: $greaterIndex")
 
         if (greaterIndex < 128) {
 
@@ -93,8 +89,6 @@ class GameLevel {
         // swap operation
         if (lessIndex > greaterIndex) lessIndex = greaterIndex.also { greaterIndex = lessIndex }
 
-        Log.i("hmIndex", "less: $lessIndex, greater: $greaterIndex")
-
         if (lessIndex % 16 > 0) {
 
             for (i in (lessIndex - 1) downTo (lessIndex - lessIndex % 16)) {
@@ -130,8 +124,6 @@ class GameLevel {
 
         // swap operation
         if (lessIndex > greaterIndex) lessIndex = greaterIndex.also { greaterIndex = lessIndex }
-
-        Log.i("hmIndex", "less: $lessIndex, greater: $greaterIndex")
 
         if (greaterIndex % 16 < 15) {
 
@@ -180,8 +172,6 @@ class GameLevel {
 
         // swap operation
         if (lessIndex > greaterIndex) lessIndex = greaterIndex.also { greaterIndex = lessIndex }
-
-        Log.i("hmIndex", "less: $lessIndex, greater: $greaterIndex")
 
         if (greaterIndex % 16 < 7) {
 
@@ -242,8 +232,6 @@ class GameLevel {
 
         // swap operation
         if (lessIndex > greaterIndex) lessIndex = greaterIndex.also { greaterIndex = lessIndex }
-
-        Log.i("hmIndex", "less: $lessIndex, greater: $greaterIndex")
 
         if (lessIndex > 15 && lessIndex % 16 != 0) {
 
@@ -309,8 +297,6 @@ class GameLevel {
 
         // swap operation
         if (lessIndex > greaterIndex) lessIndex = greaterIndex.also { greaterIndex = lessIndex }
-
-        Log.i("hmIndex", "less: $lessIndex, greater: $greaterIndex")
 
         if (greaterIndex < 128 && greaterIndex % 16 < 15) {
 
@@ -468,8 +454,6 @@ class GameLevel {
         // swap operation
         if (lessIndex > greaterIndex) lessIndex = greaterIndex.also { greaterIndex = lessIndex }
 
-        Log.i("hmIndex", "less: $lessIndex, greater: $greaterIndex")
-
         if (lessIndex % 16 in 1..7) {
 
             for (i in (lessIndex - 1) downTo (lessIndex - lessIndex % 16)) {
@@ -537,8 +521,6 @@ class GameLevel {
 
         // swap operation
         if (lessIndex > greaterIndex) lessIndex = greaterIndex.also { greaterIndex = lessIndex }
-
-        Log.i("hmIndex", "less: $lessIndex, greater: $greaterIndex")
 
         if (lessIndex in 16..63) {
 
@@ -981,8 +963,6 @@ class GameLevel {
         // swap operation
         if (lessIndex > greaterIndex) lessIndex = greaterIndex.also { greaterIndex = lessIndex }
 
-        Log.i("hmIndex", "less: $lessIndex, greater: $greaterIndex")
-
         if (greaterIndex < 64) {
 
             for (i in (greaterIndex + 16)..(64 + greaterIndex % 16) step 16) {
@@ -1104,8 +1084,6 @@ class GameLevel {
         // swap operation
         if (lessIndex > greaterIndex) lessIndex = greaterIndex.also { greaterIndex = lessIndex }
 
-        Log.i("hmIndex", "less: $lessIndex, greater: $greaterIndex")
-
         if (greaterIndex < 128 && greaterIndex % 16 > 0) {
 
             if (greaterIndex % 16 + greaterIndex / 16 <= 8) {
@@ -1179,8 +1157,6 @@ class GameLevel {
 
         // swap operation
         if (lessIndex > greaterIndex) lessIndex = greaterIndex.also { greaterIndex = lessIndex }
-
-        Log.i("hmIndex", "less: $lessIndex, greater: $greaterIndex")
 
         if (lessIndex > 15 && lessIndex % 16 < 15) {
 

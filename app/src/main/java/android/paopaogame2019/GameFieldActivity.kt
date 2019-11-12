@@ -72,9 +72,6 @@ class GameFieldActivity : AppCompatActivity(), View.OnClickListener {
         )
         setContentView(R.layout.activity_game_field)
 
-
-        Log.i("gamegame", "GameFieldActivity. In OnCreate()")
-
         audioManager = applicationContext.getSystemService(Context.AUDIO_SERVICE) as AudioManager
         val actVolume = audioManager!!.getStreamVolume(AudioManager.STREAM_MUSIC)
         val maxVolume = audioManager!!.getStreamMaxVolume(AudioManager.STREAM_MUSIC)
@@ -139,10 +136,7 @@ class GameFieldActivity : AppCompatActivity(), View.OnClickListener {
             searchImgIds = game?.getSearcImgIds()
             pressedImgIds = game?.getPressImgIds()
 
-            Log.i("gamegame", "game: $game")
         }
-
-        Log.i("gamegame", "GameFieldActivity. In OnResume()")
 
         sharedPref = getSharedPreferences(sharedPrefSaveGameIndicators, Context.MODE_PRIVATE)
 
@@ -181,8 +175,6 @@ class GameFieldActivity : AppCompatActivity(), View.OnClickListener {
             gmCompleteDialog = null
         }
 
-        Log.i("gamegame", "GameFieldActivity. In OnPause()")
-
         sharedPref = getSharedPreferences(sharedPrefSaveGameIndicators, Context.MODE_PRIVATE)
 
         val editor = sharedPref.edit()
@@ -198,7 +190,6 @@ class GameFieldActivity : AppCompatActivity(), View.OnClickListener {
             editor.putBoolean("isGameCompleted", false)
             editor.putString("gameState", "continue")
 
-            Log.i("gamegame", "ProgBar in OnPause")
             editor.putInt("progBar", progBar.progress)
             editor.putString("curScore", tvScore.text.toString())
             editor.putString("searchCount", tvSearch.text.toString())
@@ -237,14 +228,10 @@ class GameFieldActivity : AppCompatActivity(), View.OnClickListener {
 
         game = null
 
-        Log.i("g3", "$game")
-
         super.onPause()
     }
 
     override fun onStop() {
-
-        Log.i("gamegame", "GameFieldActivity. In OnStop()")
 
         sPool!!.release()
         sPool = null
@@ -253,8 +240,6 @@ class GameFieldActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     override fun onDestroy() {
-
-        Log.i("gamegame", "GameFieldActivity. In OnDestroy()")
 
         audioManager = null
 
@@ -278,15 +263,12 @@ class GameFieldActivity : AppCompatActivity(), View.OnClickListener {
                     pressedImgIds!![game!!.cardIdImgId[cardsGL.indexOfChild(firstBtn)]]!!
                 )
 
-                Log.i("click", "firstBtn1: $firstBtn")
-
                 clickCount = 1
 
 
             } else if (clickCount == 1 && firstBtn != v) {
 
                 var secondBtn = v
-                Log.i("click", "second1: $secondBtn")
 
                 val isIdentityCards = game!!.checkIdentity(
                     cardsGL.indexOfChild(firstBtn),
@@ -322,8 +304,6 @@ class GameFieldActivity : AppCompatActivity(), View.OnClickListener {
                     // and set the hided first clicked button to null,
                     firstBtn = null
 
-                    Log.i("click", "firstBtn2: $firstBtn, secondBtn2: $secondBtn")
-
                     // Finally reset the click counter to 0
                     clickCount = 0
                 }
@@ -349,7 +329,6 @@ class GameFieldActivity : AppCompatActivity(), View.OnClickListener {
                     // , ... reset clickCount to 1 which means that first btn was clicked and ready to compare with next btn will be clicked
                     clickCount = 1
 
-                    Log.i("click", "firstBtn3: $firstBtn")
                 }
             }
         }
@@ -359,7 +338,6 @@ class GameFieldActivity : AppCompatActivity(), View.OnClickListener {
 
         if (keyCode == KeyEvent.KEYCODE_BACK) {
 
-            Log.i("gamegame", "GameFieldActivity. Back Button Pressed")
             this.finish()
             //super.onBackPressed()
         }
@@ -416,11 +394,6 @@ class GameFieldActivity : AppCompatActivity(), View.OnClickListener {
     private fun onSearchClick(){
 
         if (tvSearch.text.toString().toInt() > 0) {
-
-            Log.i(
-                "next",
-                "possibleNextFirstBtnIndex: ${game!!.possibleNextFirstBtnIndex}, possibleNextSecondBtnIndex: ${game!!.possibleNextSecondBtnIndex}"
-            )
 
             cardsGL.getChildAt(game!!.possibleNextFirstBtnIndex)
                 .setBackgroundResource(searchImgIds!![game!!.cardIdImgId[game!!.possibleNextFirstBtnIndex]]!!)

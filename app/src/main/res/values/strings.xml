@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Paopao Experiment</string>
+    <string name="app_name">PAOPAO 2019</string>
     <string name="video_ad">Press Watch Video to receive some extra time</string>
     <string name="new_game">New Game</string>
     <string name="continue_game">Continue</string>
@@ -7,7 +7,6 @@
     <string name="exit_game">Exit</string>
     <string name="easy_game">Easy</string>
     <string name="hard_game">Hard</string>
-    <string name="">Level passed!</string>
     <string name="win_dlg_score">Score</string>
     <string name="score_value" translatable="false">000000</string>
     <string name="win_dlg_level">Level</string>

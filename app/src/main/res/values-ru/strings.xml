@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Paopao Experiment</string>
+    <string name="app_name">PAOPAO 2019</string>
     <string name="video_ad">Нажмите на Смотреть Видео чтобы получить дополнительное время</string>
     <string name="new_game">Новая Игра</string>
     <string name="continue_game">Продолжить</string>
@@ -8,7 +8,6 @@
     <string name="exit_game">Выход</string>
     <string name="easy_game">Легкий</string>
     <string name="hard_game">Сложный</string>
-    <string name="">Победа</string>
     <string name="win_dlg_score">Количество очков</string>
     <string name="win_dlg_level">Уровень</string>
     <string name="win_dlg_close">Закрыть</string>
@@ -17,6 +16,6 @@
     <string name="shuffle_descr">значок перемешать</string>
     <string name="game_complete_title">Поздравляем!!! Вы прошли все уровни!!!</string>
     <string name="ok">Закрыть</string>
-    <string name="time_over" translatable="false">Время вышло</string>
+    <string name="time_over">Время вышло</string>
     <string name="win_dlg_header">Уровень пройден</string>
 </resources>
